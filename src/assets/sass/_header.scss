@@ -1,10 +1,10 @@
 header {
     padding: 0.5rem 0;
-    background-color: #091015e7;
+    background-color: #091015f2;
     z-index: $highIndex;
     position: relative;
     top: 0;
-    transition: all .5s ease-in-out 0s;
+    transition: top .5s ease-in-out 0s;
     &.sticky {
         // box-shadow: 1px 4px 18px 5px rgba(0, 0, 0, 0.597);
         position: fixed;

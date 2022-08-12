@@ -18,8 +18,10 @@ const Header = ({ routes }) => {
         try {
             if (app.scrollTop >= 72) header.style.top = '-75px';
             else header.style.top = null;
-            if (app.scrollTop >= 100) header.classList.add('sticky');
-            else header.classList.remove('sticky');
+            if (app.scrollTop >= 100) {
+                header.classList.add('sticky');
+                header.style.width = app.scrollWidth + 'px';
+            } else { header.classList.remove('sticky'); header.style.width = null }
         } catch (error) { }
     });
 
