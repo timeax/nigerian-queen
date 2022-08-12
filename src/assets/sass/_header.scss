@@ -1,0 +1,130 @@
+header {
+    padding: 0.5rem 0;
+    background-color: #091015e7;
+    z-index: $highIndex;
+    box-shadow: 1px 4px 18px 5px #091015e7;
+    position: relative;
+    top: 0;
+    transition: all .5s ease-in-out 0s;
+    &.sticky {
+        box-shadow: 1px 4px 18px 5px rgba(0, 0, 0, 0.597);
+        position: fixed;
+        top: 0 !important;
+        width: 100%;
+    }
+
+    @include media(">monitor") {
+        .menu-toggler {
+            display: none;
+        }
+    }
+
+    .navbar-container {
+        position: fixed;
+        margin-left: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: transparent;
+        transition: transform 0.3s ease-in-out 0ms;
+        transform: translateX(-10000px);
+        &.hide {
+            transform: translateX(-10000px);
+        }
+
+        &.show {
+            transform: none;
+            z-index: 9999999999999999999999999999999999999999;
+            nav {
+                background-color: $dark2;
+            }
+        }
+        nav {
+            height: 100%;
+            display: flex;
+            width: 40%;
+            flex-direction: column;
+            .nav-brand {
+                border-bottom: 1px solid grey;
+                padding: 0.4rem 3px;
+                margin-bottom: 6px;
+                @extend %flex;
+
+                img.app-logo {
+                    margin: auto;
+                    width: 120px;
+                }
+            }
+            .nav-item {
+                border-radius: none;
+                display: flex;
+                align-items: center;
+                z-index: 99999999;
+                margin-bottom: 1rem;
+                //-----
+                a {
+                    color: $baseLight;
+                    display: inline-flex;
+                    text-decoration: none;
+                    align-items: center;
+                    padding: 0.8rem 1.2rem;
+                    font-size: 0.85em;
+
+                    span + svg {
+                        margin-left: 5px;
+                    }
+                }
+
+                &.current {
+                    background-color: rgb(61, 61, 61);
+                }
+
+                &.btnLink {
+                    background-color: $theme;
+                }
+            }
+        }
+
+        //media constraint
+        @include media(">monitor") {
+            position: relative;
+            margin: auto;
+            margin-right: 0;
+            height: fit-content;
+            width: fit-content;
+            background-color: transparent;
+            transform: none;
+            &.show,
+            &.hide {
+                transform: none;
+                z-index: auto;
+                nav {
+                    background-color: transparent;
+                }
+            }
+
+            nav {
+                width: 100%;
+                flex-direction: row;
+                .nav-brand {
+                    display: none !important;
+                }
+                .nav-item {
+                    border-radius: 6px;
+                    margin-bottom: 0;
+                    a {
+                        padding: 0.4rem 1.2rem;
+                    }
+                    &.current {
+                        background-color: rgba(84, 83, 83, 0.605);
+                    }
+
+                    &.btnLink {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.app-hero-section {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    @include media(">tablet") {
+        height: 100vh;
+    }
+    @extend %flex;
+    video {
+        position: relative;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 60vh;
+        object-fit: cover;
+        @include media("<phone") {
+            height: 100vh;
+        }
+        @include media(">tablet") {
+            height: 100vh;
+        }
+
+        @include media(">monitor") {
+            position: fixed;
+        }
+    }
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        background: radial-gradient(rgba(27, 32, 30, 0.874), #091015d0);
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        color: $light;
+        justify-content: center;
+    }
+
+    &.image-banner {
+        border-radius: 0 0 40px 40px;
+        height: 40vh;
+        h1 {
+            text-align: center;
+        }
+    }
+
+    &.home-banner {
+        * {
+            color: white;
+        }
+        .desc {
+            width: 100%;
+            @include media('>tablet') {
+                width: 65%;
+            }
+
+            @include media('>monitor') {
+                width: 55%;
+            }
+            .sub-heading {
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                line-height: 1 !important;
+            }
+
+            p {
+                font-size: 1.5em;
+                font-weight: 600;
+                margin-bottom: 1rem !important;
+            }
+
+            h1,
+            h3,
+            p {
+                padding: 0;
+                line-height: 1.5;
+                margin: 0.3rem 0;
+            }
+        }
+    }
+}

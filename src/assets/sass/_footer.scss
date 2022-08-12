@@ -1,0 +1,100 @@
+footer {
+    position: relative;
+    z-index: $highIndex;
+    background-color: white;
+    .footer {
+        background-color: $dark2;
+        color: $light;
+        // padding: 2rem 0;
+        @extend %flex;
+        span,
+        p,
+        a {
+            font-size: 13px;
+            color: rgb(191, 191, 191);
+            line-height: 1.5;
+        }
+
+        // border-radius: 30px 30px 0 0;
+        // padding: 1.4rem 0;
+        .footer-container {
+            flex-direction: column;
+            @include media(">monitor") {
+                flex-direction: row;
+            }
+        }
+        .footer-address {
+            padding-right: 1rem;
+            .social-media {
+                margin-top: 6px;
+                span {
+                    padding: 0 0.8rem;
+                    svg {
+                        font-size: 14px;
+                        color: whitesmoke;
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                        a {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .quick-links {
+            .table {
+                div {
+                    flex-grow: 1;
+                }
+                h3 {
+                    margin-bottom: 3px;
+                }
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    @extend %flex;
+                    li {
+                        list-style: none;
+                        // padding: .51rem 0;
+                        @include media('>tablet') {
+                            width: 100%;
+                        }
+
+                        @include media('>monitor') {
+                            width: 16rem;
+                        }
+
+                        a {
+                            display: inline-block;
+                            text-transform: capitalize;
+                            text-decoration: none;
+                            padding: 0.4rem 0;
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .subscribe-section {
+            input {
+                background-color: white;
+                padding: 4px;
+                border: none;
+            }
+
+            p {
+                @include media('>monitor') {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    //media constraint
+    @include media(">monitor") {
+    }
+}

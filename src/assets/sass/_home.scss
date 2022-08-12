@@ -1,0 +1,66 @@
+.app-home {
+    flex-grow: 1;
+    overflow: visible;
+    @extend %flex;
+    .classic-section {
+        position: relative;
+        z-index: $lowIndex;
+        background-color: white;
+    }
+    .about-brand-section {
+        position: relative;
+        z-index: $lowIndex;
+        background-color: $dark2;
+        color: white;
+        // border-radius: 20px 0;
+        h1 {
+            margin: 10px 0;
+        }
+        p {
+            line-height: 1.6;
+            color: $light;
+        }
+    }
+
+    .bfp-section {
+        background-color: transparent;
+        padding-top: 8px;
+        overflow: visible;
+        * {
+            overflow: visible;
+        }
+        .row > * {
+            padding: 0;
+        }
+        h1 {
+            color: $theme;
+        }
+
+        .video-frame {
+            width: 90%;
+            height: 150px;
+        }
+    }
+
+    .blog-section {
+        background-color: $light;
+        border-radius: 60px;
+        .titleBox {
+            h1 {
+                color: $theme;
+            }
+        }
+    }
+
+    .vote-desc-section {
+        .titleBox {
+            h1 {
+                font-size: 50px;
+                color: $theme;
+                font-weight: 800;
+                line-height: 1;
+                padding-right: 8px;
+            }
+        }
+    }
+}
