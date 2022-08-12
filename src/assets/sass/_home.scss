@@ -2,6 +2,12 @@
     flex-grow: 1;
     overflow: visible;
     @extend %flex;
+    .home-banner {
+        h1 {
+            line-height: 1.2 !important;
+        }
+    }
+
     .classic-section {
         position: relative;
         z-index: $lowIndex;
@@ -55,11 +61,15 @@
     .vote-desc-section {
         .titleBox {
             h1 {
-                font-size: 50px;
+                font-size: 30px;
                 color: $theme;
                 font-weight: 800;
                 line-height: 1;
                 padding-right: 8px;
+
+                @include media(">tablet") {
+                    font-size: 50px;
+                }
             }
         }
     }

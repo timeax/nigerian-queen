@@ -9,7 +9,7 @@ const BFP = () => {
     return (
         <Section styleClass='bfp-section'>
             <div className="d-flex flex-column">
-                <Title size='45px' className='mb-3' color='var(--theme)'>Beauty for purpose</Title>
+                <Title className='mb-3' color='var(--theme)'>Beauty for purpose</Title>
                 <div className="d-flex flex-wrap">
                     {videos.map((item, i) => <div key={i} className='col-6 d-flex align-items-center mb-4'>
                         <VideoFrame link={item} height='null' />

@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 const AboutBrand = () => {
     return (
         <DescSection
-            title='TNQ Brand.'
+            title='Divapee Agency.'
             className="about-brand-section"
             placement={{ right: 'col-lg-5 col-md-12', left: 'col-lg-7 col-md-12 titleBox d-flex flex-column justify-content-center' }}
             right={<img className='illus-image' src={brandImage} alt='Not Found' />}
